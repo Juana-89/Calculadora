@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*
+{
+font-family: 'Poppins', sans-serif;
+font-weight: bold;
+}
+body{
+    background: linear-gradient(to bottom right, #f8e7ed, #f8eeed);
+    background-image: linear-gradient(272deg, #ffcb64, #f1e37f, #003d93, #008eb2, #00e5dd);
+    background-size: 800%;
+    animation: fanimado 10s infinite; 
+}
+@keyframes fanimado{
+    0%{background-position: 0% 50%; color: #fff;}
+    50%{background-position: 100% 50%; color: #000;}
+    100%{background-position: 0% 50%; color: #fff;}
+}
+
+h2{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 25px;
+    text-align: center;
+}
+#main_container { 
+    width: 25em;
+    height: 31em;
+    background-color: #B0C4DE	;
+    border-radius: 30px;
+    /* position: absolute; */
+    /*centrar*/
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+.main_div_number{
+    margin-top: 0px;
+}
+
+.div_input{
+    width: 7.6em;
+    height:3em;
+    border-radius: 30px;
+    margin: 45px 45px 18px;
+    background-color: #FCE24D;
+    border: none;
+    text-align: end;
+    line-height: 35em;
+    outline: none; /*eliminando el efecto resplandor en el input*/
+    font-size: 40px;
+}
+.content-keys{
+    width: 5em;
+    height: 5em;
+    display: grid;
+    grid-template-columns: repeat(4, 5.3em); /*indica cuántas columnas irán dentro el grid*/
+    /* gap: 20px; espaciado entre los divs */
+    margin: 45px 45px 45px 45px;
+    margin-top:0;
+}
+.div_keyboard{
+    width: 45px;
+    height: 45px;
+    border:5px solid #000;
+    background:#2F32F1;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+.div_keyboard:hover{
+    border:5px solid #fff;
+    background:#FA2525;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 528px){
+
+    /* h2{
+        font-size:15px;
+    } */
+    #main_container {
+        width: 18em;
+        height: 27em;
+    }
+    .div_input {
+        width: 12em;
+        height: 5em;
+        border-radius: 18px;
+        margin: 25px 25px 18px;
+        font-size: 20px;
+    }
+    .content-keys{
+    grid-template-columns: repeat(4, 4em);
+    margin: 0 25px;
+    }
+}
+
+@media only screen and (max-width: 280px){
+    h2{
+        font-size:20px;
+    }
+
+    #main_container {
+        width: 16em;
+        height: 25em;
+    }
+
+    .div_input {
+        width: 10em;
+        height: 4em;
+        border-radius: 20px;
+        margin: 25px 25px 10px 25px;
+        font-size: 20px;
+    }
+    
+    .content-keys{
+    grid-template-columns: repeat(4, 3.5em);
+    margin: 0 20px;
+    }
+}
